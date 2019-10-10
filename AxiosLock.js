@@ -8,7 +8,7 @@ export default function AxiosLock(config, then, error, final){
     UI.lock();
     axios(config)
     .then(res=>{
-      then(res)
+      then(res.data)
     }).catch(err=>{
       error(err)
     }).finally(()=>{
